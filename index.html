@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Food Recipe Photo App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AI Food Recipe Photo App</h1>
+        </header>
+
+        <section id="controls">
+            <h2>Controls</h2>
+            <div class="control-group">
+                <label for="capture-interval">Capture Interval:</label>
+                <select id="capture-interval">
+                    <option value="5">5 seconds</option>
+                    <option value="10">10 seconds</option>
+                    <option value="15">15 seconds</option>
+                    <option value="30">30 seconds</option>
+                    <option value="60" selected>1 minute</option>
+                    <option value="300">5 minutes</option>
+                    <option value="600">10 minutes</option>
+                    <option value="1200">20 minutes</option>
+                    <option value="1800">30 minutes</option>
+                </select>
+            </div>
+            <button id="start-cooking">Start Cooking</button>
+            <button id="finish-cooking" disabled>Finish Cooking</button>
+        </section>
+
+        <section id="camera-feed">
+            <h2>Live Feed & Snaps</h2>
+            <video id="live-video" autoplay playsinline muted></video>
+            <canvas id="photo-canvas" style="display:none;"></canvas>
+        </section>
+
+        <section id="photo-timeline">
+            <h2>Photo Timeline</h2>
+            <div id="timeline-container">
+                <!-- Captured photos will be appended here -->
+            </div>
+        </section>
+
+        <section id="recipe-display">
+            <h2>Generated Recipe</h2>
+            <div id="recipe-content">
+                <p>Your recipe will appear here once you finish cooking.</p>
+                <h3 id="recipe-name"></h3>
+                <p><strong>Estimated Cooking Time:</strong> <span id="recipe-time"></span></p>
+                <h4>Ingredients:</h4>
+                <ul id="recipe-ingredients"></ul>
+                <h4>Steps:</h4>
+                <ol id="recipe-steps"></ol>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2024 AI Food Recipe App</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
